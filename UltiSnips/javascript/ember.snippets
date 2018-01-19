@@ -1,22 +1,21 @@
 snippet iE "import Ember"
 import Ember from 'ember';
-$0
 endsnippet
 
 snippet eoc "Ember Object Create"
-Ember.Object.create({
+EmberObject.create({
   $0
 });
 endsnippet
 
 snippet etest "QUnit test"
-test('$1', (assert) => {
+test('$1', function(assert) {
   $0
 });
 endsnippet
 
 snippet comp "Ember computed property"
-Ember.computed('$1', function() {
+computed('$1', function() {
   $0
-});
+})
 endsnippet
