@@ -1,0 +1,88 @@
+snippet click "await click(...): Ember Test"
+await click('${1:selector}');
+endsnippet
+
+snippet doubleClick "await doubleClick(...): Ember Test"
+await doubleClick('${1:selector}');
+endsnippet
+
+snippet tap "await tap(...): Ember Test"
+await tap('${1:selector}');
+endsnippet
+
+snippet focus "await focus(...): Ember Test"
+await focus('${1:selector}');
+endsnippet
+
+snippet blur "await blur(...): Ember Test"
+await blur('${1:selector}');
+endsnippet
+
+snippet triggerKeyEvent "await triggerKeyEvent(...): Ember Test"
+await triggerKeyEvent('${1:sel}', '${2:type}', '${3:key}', '${4:mods}');
+endsnippet
+
+snippet triggerEvent "await triggerEvent(...): Ember Test"
+await triggerEvent('$${1:selector}', '${2:type}', '${3:options}');
+endsnippet
+
+snippet fillIn "await fillIn(...): Ember Test"
+await fillIn('${1:selector}', '${2:text}');
+endsnippet
+
+snippet find "await find(...): Ember Test"
+find('${1:selector}');
+endsnippet
+
+snippet findAll "await findAll(...): Ember Test"
+findAll('${1:selector}');
+endsnippet
+
+snippet getRootElement "getRootElement(): Ember Test"
+getRootElement();
+endsnippet
+
+snippet visit "await visit(...): Ember Test"
+await visit('${1:url}');
+endsnippet
+
+snippet currentRouteName "currentRouteName(): Ember Test"
+currentRouteName();
+endsnippet
+
+snippet currentURL "currentURL(...): Ember Test"
+currentURL();
+endsnippet
+
+snippet render "await render(...): Ember Test"
+await render(hbs`$1`);
+endsnippet
+
+snippet render "await clearRender(): Ember Test"
+await clearRender();
+endsnippet
+
+snippet waitFor "await waitFor(...): Ember Test"
+await waitFor('${1:selector}'${2:, { timeout: 1000, count: 1 \}});
+endsnippet
+
+snippet waitUntil "await waitUntil(...): Ember Test"
+await waitUntil(() => { $1; }${2:, { timeout: 1000 \}});
+endsnippet
+
+snippet settled "await settled(): Ember Test"
+await settled();
+endsnippet
+
+snippet isSettled "isSettled(): Ember Test"
+isSettled();
+endsnippet
+
+snippet getSettledState "await getSettledState(): Ember Test"
+getSettledState();
+endsnippet
+
+snippet pauseTest "await this.pauseTest(...): Ember Test"
+await this.pauseTest();
+endsnippet
+

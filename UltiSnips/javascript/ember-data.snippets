@@ -1,0 +1,36 @@
+snippet find-all "store.findAll(...): Ember Data"
+this.store.findAll('${1:model}');
+endsnippet
+
+snippet find-record "store.findRecord(...): Ember Data"
+this.store.findRecord('${1:model}', params.${1:model}_id);
+endsnippet
+
+snippet peek-all "store.peekAll(...): Ember Data"
+this.store.peekAll('${1:model}');
+endsnippet
+
+snippet peek-record "store.peekRecord(...): Ember Data"
+this.store.peekRecord('${1:model}', params.${1:model}_id);
+endsnippet
+
+snippet query-all "store.query(...): Ember Data"
+this.store.query('${1:model}', { ${2:queryKey}: ${3:queryValue}});
+endsnippet
+
+snippet query-record "store.queryRecord(...): Ember Data"
+this.store.queryRecord('${1:model}', { ${2:queryKey}: ${3:queryValue}});
+endsnippet
+
+snippet attr "attr(...): Ember Data"
+attr('${1:string}'),
+endsnippet
+
+snippet belongsTo "belongsTo(...): Ember Data"
+belongsTo('${1:name}'),
+endsnippet
+
+snippet hasMany "hasMany(...): Ember Data"
+hasMany('${1:string}'),
+endsnippet
+

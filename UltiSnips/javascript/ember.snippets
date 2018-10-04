@@ -1,359 +1,292 @@
-snippet run "run(() => { ... })"
-run(() => {
-  $1
-});
+snippet run "run(() => { ... }): Ember"
+run(() => {,	${1},});
 endsnippet
 
-snippet lget "let ... get(...)"
+snippet lget "let ... get(...): Ember"
 let $1 = ${2:this}.get('$1');
 endsnippet
 
-snippet set ".set(...)"
+snippet set ".set(...): Ember"
 ${1:this}.set('${2}', ${3});
 endsnippet
 
-snippet get ".get(...)"
+snippet get ".get(...): Ember"
 ${1:this}.get('${2}');
 endsnippet
 
-snippet super "this._super(...)"
+snippet set "this._super(...): Ember"
 this._super(...arguments);
 endsnippet
 
-snippet init "init() { ... }"
-init() {
-  this._super(...arguments);
-
-  $1
-},
+snippet init "init() { ... }: Ember"
+init() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet service "service(...)"
-service($1),
+snippet service "service(...): Ember"
+service(${1}),
 endsnippet
 
-snippet observer "observer(...)"
-observer('${1:property}', function() {
-  ${2:// body}
-}),
+snippet observer "observer(...): Ember"
+observer('${1:property}', function() {,	${2:// body},}),
 endsnippet
 
-snippet on "on(...)"
-on('${1:property}', function() {
-  ${2:// body}
-}),
+snippet on "on(...): Ember"
+on('${1:property}', function() {,	${2:// body},}),
 endsnippet
 
-snippet actions "actions: { ... }"
-actions: {
-  ${1:// body}
-}
+snippet actions "actions: { ... }: Ember"
+actions: {,	${1:// body},},
 endsnippet
 
-snippet computed "computed(...)"
-computed('${1:property}', function() {
-  ${2:// body}
-}),
+snippet computed "computed(...): Ember"
+computed('${1:property}', function() {,	${2:// body},}),
 endsnippet
 
-snippet calias "alias(...)"
-alias('${1:key}');
+snippet calias "alias(...): Ember Computed"
+alias('${1:key}')
 endsnippet
 
-snippet cand "and(...)"
-and('${1:key1}', '${2:key2}');
+snippet cand "and(...): Ember Computed"
+and('${1:key1}', '${2:key2}')
 endsnippet
 
-snippet cbool "bool(...)"
-bool(${1:key});
+snippet cbool "bool(...): Ember Computed"
+bool(${1:key})
 endsnippet
 
-snippet ccollect "collect(...)"
-collect(${1:keys});
+snippet ccollect "collect(...): Ember Computed"
+collect(${1:keys})
 endsnippet
 
-snippet cempty "empty(...)"
-empty('${1:key}');
+snippet cempty "empty(...): Ember Computed"
+empty('${1:key}')
 endsnippet
 
-snippet cequal "equal(...)"
+snippet cequal "equal(...): Ember Computed"
 equal('${1:key}', ${2:value});
 endsnippet
 
-snippet cfilter "filter(...)"
-filter(${1:key}, function(${2:item}${3:, index}) {
-  return ${2:item};
-}));
+snippet cfilter "filter(...): Ember Computed"
+filter(${1:key}, function(${2:item}${3:, index}) {,	return ${2:item};,}));
 endsnippet
 
-snippet cfilterBy "filterBy(...)"
+snippet cfilterBy "filterBy(...): Ember Computed"
 filterBy('${1:key}', ${2:propertyKey}, ${3:value});
 endsnippet
 
-snippet cgt "gt(...)"
+snippet cgt "gt(...): Ember Computed"
 gt('${1:key}', ${2:value});
 endsnippet
 
-snippet cgte "gt(...)"
+snippet cgte "gte(...): Ember Computed"
 gte('${1:key}', ${2:value});
 endsnippet
 
-snippet intersect "intersect(...)"
-intersect('${1:key1}', '${2:key2}');
+snippet intersect "intersect(...): Ember Computed"
+intersect(${1})
 endsnippet
 
-snippet clt "lt(...)"
+snippet clt "lt(...): Ember Computed"
 lt('${1:key}', ${2:value});
 endsnippet
 
-snippet cmap "map(...)"
-map(${1:key}, function(${2:item}${3:, index}) {
-  return ${2:item};
-}));
+snippet clte "lte(...): Ember Computed"
+lte('${1:key}', ${2:value});
 endsnippet
 
-snippet cmapBy "mapBy(...)"
+snippet cmap "map(...): Ember Computed"
+map(${1:key}, function(${2:item}${3:, index}) {,	return ${2:item};,}));
+endsnippet
+
+snippet cmapBy "mapBy(...): Ember Computed"
 mapBy('${1:key}', '${2:propertyKey}');
 endsnippet
 
-snippet cmatch "match(...)"
+snippet cmatch "match(...): Ember Computed"
 match('${1:key}', ${2:regEx});
 endsnippet
 
-snippet cmax "max(...)"
+snippet cmax "max(...): Ember Computed"
 max('${1:key}');
 endsnippet
 
-snippet cmin "min(...)"
+snippet cmin "min(...): Ember Computed"
 min('${1:key}');
 endsnippet
 
-snippet cnone "none(...)"
+snippet cnone "none(...): Ember Computed"
 none('${1:key}');
 endsnippet
 
-snippet cnot "not(...)"
+snippet cnot "not(...): Ember Computed"
 not('${1:key}');
 endsnippet
 
-snippet cnotEmpty "notEmpty(...)"
+snippet cnotEmpty "notEmpty(...): Ember Computed"
 notEmpty('${1:key}');
 endsnippet
 
-snippet coneWay "oneWay(...)"
+snippet coneWay "oneWay(...): Ember Computed"
 oneWay('${1:key}');
 endsnippet
 
-snippet cor "or(...)"
+snippet cor "or(...): Ember Computed"
 or('${1:key1}', '${2:key2}');
 endsnippet
 
-snippet creadOnly "readOnly(...)"
+snippet creadOnly "readOnly(...): Ember Computed"
 readOnly('${1:key}');
 endsnippet
 
-snippet creads "reads(...)"
+snippet creads "reads(...): Ember Computed"
 reads('${1:key}');
 endsnippet
 
-snippet csetDiff "setDiff(...)"
+snippet csetDiff "setDiff(...): Ember Computed"
 setDiff('${1:key1}', '${2:key2}');
 endsnippet
 
-snippet csort "sort(...)"
+snippet csort "sort(...): Ember Computed"
 sort('${1:itemsKey}', '${2:sortDefinition}');
 endsnippet
 
-snippet csum "sum(...)"
+snippet csum "sum(...): Ember Computed"
 sum('${1:key}');
 endsnippet
 
-snippet cunion "union(...)"
+snippet cunion "union(...): Ember Computed"
 union('${1:key1}', '${2:key2}');
 endsnippet
 
-snippet cuniq "uniq(...)"
+snippet cuniq "uniq(...): Ember Computed"
 uniq('${1:key}', '${2:propertyKey}');
 endsnippet
 
-snippet cuniqBy "uniqBy(...)"
+snippet cuniqBy "uniqBy(...): Ember Computed"
 uniqBy('${1:key}');
 endsnippet
 
-snippet bind "bind(...)"
+snippet bind "bind(...): Ember"
 bind(${1:this}, ${2:this.methodName});
 endsnippet
 
-snippet cancel "cancel(...)"
+snippet cancel "cancel(...): Ember"
 cancel('${1:key}');
 endsnippet
 
-snippet debounce "debounce(...)"
+snippet debounce "debounce(...): Ember"
 debounce(${1:this}, '${2:methodName}', ${3:500});
 endsnippet
 
-snippet later "later(...)"
-later(${1:this}, () => { ${2}\\}, ${3:500});
+snippet later "later(...): Ember"
+later(${1:this}, () => { ${2}\}, ${3:500});
 endsnippet
 
-snippet next "next(...)"
-next(${1:this}, () => { ${2}\\});
+snippet next "next(...): Ember"
+next(${1:this}, () => { ${2}\});
 endsnippet
 
-snippet once "once(...)"
-once(${1:this}, () => { ${2}\\});
+snippet once "once(...): Ember"
+once(${1:this}, () => { ${2}\});
 endsnippet
 
-snippet run "run(...)"
-run(() => { ${1}\\});
+snippet run "run(...): Ember"
+run(() => { ${1}\});
 endsnippet
 
-snippet schedule "schedule(...)"
-schedule('${1:queue}', ${2:this}, () => { ${3}\\}, );
+snippet schedule "schedule(...): Ember"
+schedule('${1:queue}', ${2:this}, () => { ${3}\}, );
 endsnippet
 
-snippet scheduleOnce "scheduleOnce(...)"
-scheduleOnce('${1:queue}', ${2:this}, () => { ${3}\\}, );
+snippet scheduleOnce "scheduleOnce(...): Ember"
+scheduleOnce('${1:queue}', ${2:this}, () => { ${3}\}, );
 endsnippet
 
-snippet throttle "throttle(...)"
+snippet throttle "throttle(...): Ember"
 throttle(${1:this}, '${2:methodName}', ${3:500});
 endsnippet
 
-snippet model "Route: model(...) { ... }"
-model(params = {}) {
-  return this.store.query('${1}', params);
-},
+snippet model "Route: model(...) { ... }: Ember"
+model(params = {}) {,	return this.store.query('${1}', params);,},
 endsnippet
 
-snippet setupController "Route: setupController(...) { ... }"
-setupController(controller, model) {
-  this._super(controller, model);
-
-  ${1}
-},
-
+snippet setupController "setupController(...) { ... }: Ember"
+setupController(controller, model) {,	this._super(controller, model);,	${1},},
 endsnippet
 
-snippet beforeModel "Route: beforeModel(...) { ... }"
-beforeModel(transition) {
-  this._super(controller, model);
-
-  ${1}
-},
-
+snippet beforeModel "Route: beforeModel(...) { ... }: Ember"
+beforeModel(transition) {,	this._super(controller, model);,	${1},},
 endsnippet
 
-snippet afterModel "Route: afterModel(...) { ... }"
-afterModel(model, transition) {
-  this._super(controller, model);
-
-  ${1}
-},
-
+snippet afterModel "Route: afterModel(...) { ... }: Ember"
+afterModel(model, transition) {,	this._super(controller, model);,	${1},},
 endsnippet
 
-snippet didReceiveAttrs "Component: didReceiveAttrs() { ... }"
-didReceiveAttrs() {
-  this._super(...arguments);
-
-  ${1}
-},
-
+snippet didReceiveAttrs "Component: didReceiveAttrs() { ... }: Ember"
+didReceiveAttrs() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet didRender "Component: didRender() { ... }"
-didRender() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet didRender "Component: didRender() { ... }: Ember"
+didRender() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet didUpdateAttrs "Component: didUpdateAttrs() { ... }"
-didUpdateAttrs() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet didUpdateAttrs "Component: didUpdateAttrs() { ... }: Ember"
+didUpdateAttrs() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet willUpdate "Component: willUpdate() { ... }"
-willUpdate() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet willUpdate "Component: willUpdate() { ... }: Ember"
+willUpdate() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet didInsertElement "Component: didInsertElement() { ... }"
-didInsertElement() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet didInsertElement "Component: didInsertElement() { ... }: Ember"
+didInsertElement() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet willDestroyElement "Component: willDestroyElement() { ... }"
-willDestroyElement() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet willDestroyElement "Component: willDestroyElement() { ... }: Ember"
+willDestroyElement() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet willClearElement "Component: willClearElement() { ... }"
-willClearElement() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet willClearElement "Component: willClearElement() { ... }: Ember"
+willClearElement() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet didDestroyElement "Component: didDestroyElement() { ... }"
-didDestroyElement() {
-  this._super(...arguments);
-
-  ${1}
-},
+snippet didDestroyElement "Component: didDestroyElement() { ... }: Ember"
+didDestroyElement() {,	this._super(...arguments);,	${1},},
 endsnippet
 
-snippet filterBy ".filterBy(...)"
+snippet filterBy ".filterBy(...): Ember Enumerable"
 ${1:enumerable}.filterBy('${2:property}', ${3:value});
 endsnippet
 
-snippet mapBy ".mapBy(...)"
+snippet mapBy ".mapBy(...): Ember Enumerable"
 ${1:enumerable}.mapBy('${2:property}');
 endsnippet
 
-snippet every ".every(...)"
-${1:enumerable}.every(function(${2:item}) {
-  ${3}
-});
+snippet every ".every(...): Ember Enumerable"
+${1:enumerable}.every(function(${2:item}) {,	${3},});
 endsnippet
 
-snippet is-every ".isEvery(...)"
+snippet is-every ".isEvery(...): Ember Enumerable"
 ${1:enumerable}.isEvery('${2:property}', ${3:bool});
 endsnippet
 
-snippet some ".some(...)"
-${1:enumerable}.some(function(${2:item}) {
-	${3}
-});
+snippet some ".some(...): Ember Enumerable"
+${1:enumerable}.some(function(${2:item}) {,	${3},});
 endsnippet
 
-snippet is-any ".isAny(...)"
+snippet is-any ".isAny(...): Ember Enumerable"
 ${1:enumerable}.isAny('${2:property}', ${3:bool});
 endsnippet
 
-snippet to-array ".toArray(...)"
+snippet to-array ".toArray(...): Ember Enumerable"
 ${1:enumerable}.toArray();
 endsnippet
 
-snippet first-object ".get('firstObject')"
+snippet first-object ".get('firstObject'): Ember Enumerable"
 ${1:enumerable}.get('firstObject');
 endsnippet
 
-snippet last-object ".get('lastObject')"
+snippet last-object ".get('lastObject'): Ember Enumerable"
 ${1:enumerable}.get('lastObject');
 endsnippet
+
