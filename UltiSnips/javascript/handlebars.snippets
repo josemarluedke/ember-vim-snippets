@@ -1,28 +1,28 @@
-snippet get "Ember: get: undefined"
+snippet get "Ember: get"
 {{get '${1}'}}
 endsnippet
 
-snippet let "Ember: let: undefined"
+snippet let "Ember: let"
 {{#let ${1} as |${2}|}},	${3},{{/let}}
 endsnippet
 
-snippet helper "Ember: helper: undefined"
+snippet helper "Ember: helper"
 {{${1:get} '${2}'}}
 endsnippet
 
-snippet chelper "Ember: closure helper: undefined"
+snippet chelper "Ember: closure helper"
 (${1:get} '${2}')
 endsnippet
 
-snippet action "Ember: action: undefined"
+snippet action "Ember: action"
 {{action '${1:actionName}' ${2:argument}}}
 endsnippet
 
-snippet eachelse "Ember: #each/else: undefined"
+snippet eachelse "Ember: #each/else"
 {{#each ${1} as |${2}|}},	${3},{{else}},	${4},{{/each}},
 endsnippet
 
-snippet comp "Ember: component: undefined"
+snippet comp "Ember: component"
 {{#${1} ${2:as |${3:yielded}|}}},	${4},{{/${1}}},
 endsnippet
 

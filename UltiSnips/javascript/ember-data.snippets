@@ -1,36 +1,36 @@
-snippet find-all "store.findAll(...): Ember Data"
+snippet find-all "store.findAll(...)"
 this.store.findAll('${1:model}');
 endsnippet
 
-snippet find-record "store.findRecord(...): Ember Data"
+snippet find-record "store.findRecord(...)"
 this.store.findRecord('${1:model}', params.${1:model}_id);
 endsnippet
 
-snippet peek-all "store.peekAll(...): Ember Data"
+snippet peek-all "store.peekAll(...)"
 this.store.peekAll('${1:model}');
 endsnippet
 
-snippet peek-record "store.peekRecord(...): Ember Data"
+snippet peek-record "store.peekRecord(...)"
 this.store.peekRecord('${1:model}', params.${1:model}_id);
 endsnippet
 
-snippet query-all "store.query(...): Ember Data"
+snippet query-all "store.query(...)"
 this.store.query('${1:model}', { ${2:queryKey}: ${3:queryValue}});
 endsnippet
 
-snippet query-record "store.queryRecord(...): Ember Data"
+snippet query-record "store.queryRecord(...)"
 this.store.queryRecord('${1:model}', { ${2:queryKey}: ${3:queryValue}});
 endsnippet
 
-snippet attr "attr(...): Ember Data"
+snippet attr "attr(...)"
 attr('${1:string}'),
 endsnippet
 
-snippet belongsTo "belongsTo(...): Ember Data"
+snippet belongsTo "belongsTo(...)"
 belongsTo('${1:name}'),
 endsnippet
 
-snippet hasMany "hasMany(...): Ember Data"
+snippet hasMany "hasMany(...)"
 hasMany('${1:string}'),
 endsnippet
 
