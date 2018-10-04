@@ -1,21 +1,359 @@
-snippet iE "import Ember"
-import Ember from 'ember';
-endsnippet
-
-snippet eoc "Ember Object Create"
-EmberObject.create({
-  $0
+snippet run "run(() => { ... })"
+run(() => {
+  $1
 });
 endsnippet
 
-snippet etest "QUnit test"
-test('$1', function(assert) {
-  $0
+snippet lget "let ... get(...)"
+let $1 = ${2:this}.get('$1');
+endsnippet
+
+snippet set ".set(...)"
+${1:this}.set('${2}', ${3});
+endsnippet
+
+snippet get ".get(...)"
+${1:this}.get('${2}');
+endsnippet
+
+snippet super "this._super(...)"
+this._super(...arguments);
+endsnippet
+
+snippet init "init() { ... }"
+init() {
+  this._super(...arguments);
+
+  $1
+},
+endsnippet
+
+snippet service "service(...)"
+service($1),
+endsnippet
+
+snippet observer "observer(...)"
+observer('${1:property}', function() {
+  ${2:// body}
+}),
+endsnippet
+
+snippet on "on(...)"
+on('${1:property}', function() {
+  ${2:// body}
+}),
+endsnippet
+
+snippet actions "actions: { ... }"
+actions: {
+  ${1:// body}
+}
+endsnippet
+
+snippet computed "computed(...)"
+computed('${1:property}', function() {
+  ${2:// body}
+}),
+endsnippet
+
+snippet calias "alias(...)"
+alias('${1:key}');
+endsnippet
+
+snippet cand "and(...)"
+and('${1:key1}', '${2:key2}');
+endsnippet
+
+snippet cbool "bool(...)"
+bool(${1:key});
+endsnippet
+
+snippet ccollect "collect(...)"
+collect(${1:keys});
+endsnippet
+
+snippet cempty "empty(...)"
+empty('${1:key}');
+endsnippet
+
+snippet cequal "equal(...)"
+equal('${1:key}', ${2:value});
+endsnippet
+
+snippet cfilter "filter(...)"
+filter(${1:key}, function(${2:item}${3:, index}) {
+  return ${2:item};
+}));
+endsnippet
+
+snippet cfilterBy "filterBy(...)"
+filterBy('${1:key}', ${2:propertyKey}, ${3:value});
+endsnippet
+
+snippet cgt "gt(...)"
+gt('${1:key}', ${2:value});
+endsnippet
+
+snippet cgte "gt(...)"
+gte('${1:key}', ${2:value});
+endsnippet
+
+snippet intersect "intersect(...)"
+intersect('${1:key1}', '${2:key2}');
+endsnippet
+
+snippet clt "lt(...)"
+lt('${1:key}', ${2:value});
+endsnippet
+
+snippet cmap "map(...)"
+map(${1:key}, function(${2:item}${3:, index}) {
+  return ${2:item};
+}));
+endsnippet
+
+snippet cmapBy "mapBy(...)"
+mapBy('${1:key}', '${2:propertyKey}');
+endsnippet
+
+snippet cmatch "match(...)"
+match('${1:key}', ${2:regEx});
+endsnippet
+
+snippet cmax "max(...)"
+max('${1:key}');
+endsnippet
+
+snippet cmin "min(...)"
+min('${1:key}');
+endsnippet
+
+snippet cnone "none(...)"
+none('${1:key}');
+endsnippet
+
+snippet cnot "not(...)"
+not('${1:key}');
+endsnippet
+
+snippet cnotEmpty "notEmpty(...)"
+notEmpty('${1:key}');
+endsnippet
+
+snippet coneWay "oneWay(...)"
+oneWay('${1:key}');
+endsnippet
+
+snippet cor "or(...)"
+or('${1:key1}', '${2:key2}');
+endsnippet
+
+snippet creadOnly "readOnly(...)"
+readOnly('${1:key}');
+endsnippet
+
+snippet creads "reads(...)"
+reads('${1:key}');
+endsnippet
+
+snippet csetDiff "setDiff(...)"
+setDiff('${1:key1}', '${2:key2}');
+endsnippet
+
+snippet csort "sort(...)"
+sort('${1:itemsKey}', '${2:sortDefinition}');
+endsnippet
+
+snippet csum "sum(...)"
+sum('${1:key}');
+endsnippet
+
+snippet cunion "union(...)"
+union('${1:key1}', '${2:key2}');
+endsnippet
+
+snippet cuniq "uniq(...)"
+uniq('${1:key}', '${2:propertyKey}');
+endsnippet
+
+snippet cuniqBy "uniqBy(...)"
+uniqBy('${1:key}');
+endsnippet
+
+snippet bind "bind(...)"
+bind(${1:this}, ${2:this.methodName});
+endsnippet
+
+snippet cancel "cancel(...)"
+cancel('${1:key}');
+endsnippet
+
+snippet debounce "debounce(...)"
+debounce(${1:this}, '${2:methodName}', ${3:500});
+endsnippet
+
+snippet later "later(...)"
+later(${1:this}, () => { ${2}\\}, ${3:500});
+endsnippet
+
+snippet next "next(...)"
+next(${1:this}, () => { ${2}\\});
+endsnippet
+
+snippet once "once(...)"
+once(${1:this}, () => { ${2}\\});
+endsnippet
+
+snippet run "run(...)"
+run(() => { ${1}\\});
+endsnippet
+
+snippet schedule "schedule(...)"
+schedule('${1:queue}', ${2:this}, () => { ${3}\\}, );
+endsnippet
+
+snippet scheduleOnce "scheduleOnce(...)"
+scheduleOnce('${1:queue}', ${2:this}, () => { ${3}\\}, );
+endsnippet
+
+snippet throttle "throttle(...)"
+throttle(${1:this}, '${2:methodName}', ${3:500});
+endsnippet
+
+snippet model "Route: model(...) { ... }"
+model(params = {}) {
+  return this.store.query('${1}', params);
+},
+endsnippet
+
+snippet setupController "Route: setupController(...) { ... }"
+setupController(controller, model) {
+  this._super(controller, model);
+
+  ${1}
+},
+
+endsnippet
+
+snippet beforeModel "Route: beforeModel(...) { ... }"
+beforeModel(transition) {
+  this._super(controller, model);
+
+  ${1}
+},
+
+endsnippet
+
+snippet afterModel "Route: afterModel(...) { ... }"
+afterModel(model, transition) {
+  this._super(controller, model);
+
+  ${1}
+},
+
+endsnippet
+
+snippet didReceiveAttrs "Component: didReceiveAttrs() { ... }"
+didReceiveAttrs() {
+  this._super(...arguments);
+
+  ${1}
+},
+
+endsnippet
+
+snippet didRender "Component: didRender() { ... }"
+didRender() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet didUpdateAttrs "Component: didUpdateAttrs() { ... }"
+didUpdateAttrs() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet willUpdate "Component: willUpdate() { ... }"
+willUpdate() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet didInsertElement "Component: didInsertElement() { ... }"
+didInsertElement() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet willDestroyElement "Component: willDestroyElement() { ... }"
+willDestroyElement() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet willClearElement "Component: willClearElement() { ... }"
+willClearElement() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet didDestroyElement "Component: didDestroyElement() { ... }"
+didDestroyElement() {
+  this._super(...arguments);
+
+  ${1}
+},
+endsnippet
+
+snippet filterBy ".filterBy(...)"
+${1:enumerable}.filterBy('${2:property}', ${3:value});
+endsnippet
+
+snippet mapBy ".mapBy(...)"
+${1:enumerable}.mapBy('${2:property}');
+endsnippet
+
+snippet every ".every(...)"
+${1:enumerable}.every(function(${2:item}) {
+  ${3}
 });
 endsnippet
 
-snippet comp "Ember computed property"
-computed('$1', function() {
-  $0
-})
+snippet is-every ".isEvery(...)"
+${1:enumerable}.isEvery('${2:property}', ${3:bool});
+endsnippet
+
+snippet some ".some(...)"
+${1:enumerable}.some(function(${2:item}) {
+	${3}
+});
+endsnippet
+
+snippet is-any ".isAny(...)"
+${1:enumerable}.isAny('${2:property}', ${3:bool});
+endsnippet
+
+snippet to-array ".toArray(...)"
+${1:enumerable}.toArray();
+endsnippet
+
+snippet first-object ".get('firstObject')"
+${1:enumerable}.get('firstObject');
+endsnippet
+
+snippet last-object ".get('lastObject')"
+${1:enumerable}.get('lastObject');
 endsnippet
