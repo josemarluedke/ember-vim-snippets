@@ -1,0 +1,88 @@
+snippet click "await click(...)"
+await click('${1:selector}');
+endsnippet
+
+snippet doubleClick "await doubleClick(...)"
+await doubleClick('${1:selector}');
+endsnippet
+
+snippet tap "await tap(...)"
+await tap('${1:selector}');
+endsnippet
+
+snippet focus "await focus(...)"
+await focus('${1:selector}');
+endsnippet
+
+snippet blur "await blur(...)"
+await blur('${1:selector}');
+endsnippet
+
+snippet triggerKeyEvent "await triggerKeyEvent(...)"
+await triggerKeyEvent('${1:sel}', '${2:type}', '${3:key}', '${4:mods}');
+endsnippet
+
+snippet triggerEvent "await triggerEvent(...)"
+await triggerEvent('$${1:selector}', '${2:type}', '${3:options}');
+endsnippet
+
+snippet fillIn "await fillIn(...)"
+await fillIn('${1:selector}', '${2:text}');
+endsnippet
+
+snippet find "await find(...)"
+find('${1:selector}');
+endsnippet
+
+snippet findAll "await findAll(...)"
+findAll('${1:selector}');
+endsnippet
+
+snippet getRootElement "getRootElement()"
+getRootElement();
+endsnippet
+
+snippet visit "await visit(...)"
+await visit('${1:url}');
+endsnippet
+
+snippet currentRouteName "currentRouteName()"
+currentRouteName();
+endsnippet
+
+snippet currentURL "currentURL(...)"
+currentURL();
+endsnippet
+
+snippet render "await render(...)"
+await render(hbs`$1`);
+endsnippet
+
+snippet render "await clearRender()"
+await clearRender();
+endsnippet
+
+snippet waitFor "await waitFor(...)"
+await waitFor('${1:selector}'${2:, { timeout: 1000, count: 1 \}});
+endsnippet
+
+snippet waitUntil "await waitUntil(...)"
+await waitUntil(() => { $1; }${2:, { timeout: 1000 \}});
+endsnippet
+
+snippet settled "await settled()"
+await settled();
+endsnippet
+
+snippet isSettled "isSettled()"
+isSettled();
+endsnippet
+
+snippet getSettledState "await getSettledState()"
+getSettledState();
+endsnippet
+
+snippet pauseTest "await this.pauseTest(...)"
+await this.pauseTest();
+endsnippet
+
