@@ -22,15 +22,15 @@ snippet query-record "store.queryRecord(...)"
 this.store.queryRecord('${1:model}', { ${2:queryKey}: ${3:queryValue}});
 endsnippet
 
-snippet attr "attr(...)"
-attr('${1:string}'),
+snippet attr "@attr(...)"
+@attr('${1:string}') ${2:attrName};
 endsnippet
 
-snippet belongsTo "belongsTo(...)"
-belongsTo('${1:name}'),
+snippet belongsTo "@belongsTo(...)"
+@belongsTo('${1:name}') ${2:attrName};
 endsnippet
 
-snippet hasMany "hasMany(...)"
-hasMany('${1:string}'),
+snippet hasMany "@hasMany(...)"
+@hasMany('${1:name}') ${2:attrName};
 endsnippet
 
