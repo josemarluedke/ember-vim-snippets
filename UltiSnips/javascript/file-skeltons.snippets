@@ -1,146 +1,102 @@
 snippet route "Route Skeleton"
 import Route from '@ember/routing/route';
 
-export default Route.extend({
+export default class ${1:ModelName}Route extends Route {
 	model() {
-		${1:// body}
+		${2:// body}
 	}
-});
+}
 endsnippet
 
 snippet controller "Controller Skeleton"
 import Controller from '@ember/controller';
 
-export default Controller.extend({
-	${1:// body}
-});
+export default class ${1:Name}Controller extends Controller {
+	${2:// body}
+}
 endsnippet
 
 snippet service "Service Skeleton"
 import Service from '@ember/service';
 
-export default Service.extend({
-	${1:// body}
-});
+export default class ${1:Name}Service extends Service {
+	${2:// body}
+}
 endsnippet
 
 snippet component "Component Skeleton"
-import Component from '@ember/component';
+import Component from '@glimmer/component';
 
-export default Component.extend({
-	${1:// body}
-});
-endsnippet
-
-snippet mixin "Mixin Skeleton"
-import Mixin from '@ember/object/mixin';
-
-export default Mixin.extend({
-	${1:// body}
-});
-endsnippet
-
-snippet object "Object Skeleton"
-import EmberObject from '@ember/object';
-
-export default EmberObject.extend({
-	${1:// body}
-});
-endsnippet
-
-snippet bound-helper "Bound Helper Skeleton"
-import Ember from 'ember';
-
-export default Ember.Handlebars.makeBoundHelper(function() {
-	${1:// body}
-});
+export default class ${1:Name}Component extends Component {
+	${2:// body}
+}
 endsnippet
 
 snippet helper "Helper Skeleton"
-import Helper from '@ember/component/helper';
+import { helper } from '@ember/component/helper';
 
-export default Helper.extend({
-	compute() {
-		${1:// body}
-	}
-});
+function ${1:name}(${2:args}) {
+	${3:// body}
+}
+
+export default helper(${1});
 endsnippet
 
 snippet model "Model Skeleton"
-import DS from 'ember-data';
+import Model, { attr } from '@ember-data/model';
 
-export default DS.Model.extend({
-	${1:// body}
-});
+export default class ${1:Name}Model extends Model {
+	${2:// body}
+}
 endsnippet
 
 snippet adapter "REST Adapter Skeleton"
-import DS from 'ember-data';
+import RESTAdapter from '@ember-data/adapter/rest';
 
-export default DS.RESTAdapter.extend({
-	${1:// body}
-});
-endsnippet
-
-snippet active-adapter "Active Model Adapter Skeleton"
-import DS from 'ember-data';
-
-export default DS.ActiveModelAdapter.extend({
-	${1:// body}
-});
+export default class ${1:Application}Adapter extends RESTAdapter {
+	${2:// body}
+}
 endsnippet
 
 snippet jsonapi-adapter "JSON API Adapter Skeleton"
-import DS from 'ember-data';
+import JSONAPIAdapter from '@ember-data/adapter/json-api';
 
-export default DS.JSONAPIAdapter.extend({
-	${1:// body}
-});
+export default class ${1:Application}Adapter extends JSONAPIAdapter {
+	${2:// body}
+}
 endsnippet
 
 snippet serializer "REST Serializer Skeleton"
-import DS from 'ember-data';
+import RESTSerializer from '@ember-data/serializer/rest';
 
-export default DS.RESTSerializer.extend({
-	${1:// body}
-});
-endsnippet
-
-snippet active-serializer "Active Model  Serializer Skeleton"
-import DS from 'ember-data';
-
-export default DS.ActiveModelSerializer.extend({
-	${1:// body}
-});
+export default class ${1:Application}Serializer extends RESTSerializer {
+	${2:// body}
+}
 endsnippet
 
 snippet jsonapi-serializer "JSON API Serializer Skeleton"
-import DS from 'ember-data';
+import JSONAPISerializer from '@ember-data/serializer/json-api';
 
-export default DS.JSONAPISerializer.extend({
-	${1:// body}
-});
+export default class ${1:Application}Serializer extends JSONAPISerializer {
+	${2:// body}
+}
 endsnippet
 
 snippet transform "Transform Serializer Skeleton"
-import DS from 'ember-data';
+import Transform from '@ember-data/serializer/transform';
 
-export default DS.Transforms.extend({
-	${1:// body}
-});
+export default class ${1:Name}Transform extends Transform {
+	${2:// body}
+}
 endsnippet
 
 snippet initializer "Initializer Skeleton"
-export default {
-	name: '${1:name}'
-	initialize: function() {
-		${2:// body}
-	}
-};
-endsnippet
-
-snippet utility "Utility Skeleton"
-export default function ${1:myUtility}() {
+export function initialize() {
 	${2:// body}
+}
+
+export default {
+	name: '${1:name}',
+	initialize
 };
 endsnippet
