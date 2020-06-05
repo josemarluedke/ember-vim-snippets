@@ -247,7 +247,7 @@ endsnippet
 snippet model "Route: model(...) { ... }"
 model(${1:params = \{\}}) {
 	${2://body}
-},
+}
 endsnippet
 
 snippet setupController "setupController(...) { ... }"
@@ -255,19 +255,19 @@ setupController(controller, model) {
 	super.setupController(controller, model);
 
 	${1}
-},
+}
 endsnippet
 
 snippet beforeModel "Route: beforeModel(...) { ... }"
 beforeModel(${1:transition}) {
 	${1}
-},
+}
 endsnippet
 
 snippet afterModel "Route: afterModel(...) { ... }"
 afterModel(${1:model, transition}) {
 	${2}
-},
+}
 endsnippet
 
 snippet didReceiveAttrs "Component: didReceiveAttrs() { ... }"
@@ -275,7 +275,7 @@ didReceiveAttrs() {
 	super.didReceiveAttrs(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet didRender "Component: didRender() { ... }"
@@ -283,7 +283,7 @@ didRender() {
 	super.didRender(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet didUpdateAttrs "Component: didUpdateAttrs() { ... }"
@@ -291,7 +291,7 @@ didUpdateAttrs() {
 	super.didUpdateAttrs(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet willUpdate "Component: willUpdate() { ... }"
@@ -299,7 +299,7 @@ willUpdate() {
 	super.willUpdate(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet didInsertElement "Component: didInsertElement() { ... }"
@@ -307,7 +307,7 @@ didInsertElement() {
 	super.didInsertElement(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet willDestroyElement "Component: willDestroyElement() { ... }"
@@ -315,7 +315,7 @@ willDestroyElement() {
 	super.willDestroyElement(...arguments);
 
 	${1}
-},
+}
 endsnippet
 
 snippet filterBy ".filterBy(...)"
